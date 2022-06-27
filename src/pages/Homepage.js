@@ -28,7 +28,7 @@ const Homepage = () => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row g-4">
         {pokemon.map(pokemon => {
           return(
             <CardPokemon
