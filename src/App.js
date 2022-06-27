@@ -1,9 +1,18 @@
+//Components
+import Homepage from "./pages/Homepage";
+
+//bootstrap
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
 const App = () =>{
+  
   return(
-    <div>
-      <h1>Hola Mundo</h1>
-    </div>
-  );
-};
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />}/>
+      </Routes>
+    </Router>
+  )
+}
 
 export default App;
