@@ -1,17 +1,17 @@
-//Components
-import Homepage from "./pages/Homepage";
+import { useEffect } from "react";
+import useCallAPI from "./hooks/useCallAPI";
 
-//bootstrap
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-const App = () =>{
+function App() {
+  const {data, loading, error} = useCallAPI(1);
+  useEffect(() => {
+    console.log(data);
+    console.log(loading);
+  },[loading])
   
   return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />}/>
-      </Routes>
-    </Router>
+    <div className="container">
+    </div>
   )
 }
 
